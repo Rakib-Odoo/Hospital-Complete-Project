@@ -3,6 +3,7 @@ from odoo import api, fields, models
 class Hospital(models.Model):
     _name = 'hospital.hospital'
     _description = 'Hospital'
+    _rec_name = 'hosp_name'
 
     hosp_name = fields.Char(string='Hospital Name', required=True)
     hosp_type = fields.Selection([('hospital','Hospital'),

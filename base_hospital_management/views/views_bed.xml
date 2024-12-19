@@ -17,6 +17,11 @@
         <field name="model">hospital.bed</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_available" string="Available" type="object" class="btn-primary"/>
+                    <button name="action_unavailable" string="Unavailable" type="object" class="btn-primary"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -27,6 +32,9 @@
                             <field name="bed_rent"/>
                         </group>
                         <group>
+                            <field name="institution_id"/>
+                            <field name="building_id"/>
+                            <field name="ward_id"/>
                             <field name="repair_charge"/>
                             <field name="repair_date"/>
                         </group>
