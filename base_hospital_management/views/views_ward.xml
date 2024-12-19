@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
+    <record id="wards_tree_view" model="ir.ui.view">
+        <field name="name">hospital.ward.tree</field>
+        <field name="model">hospital.ward</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ward_no"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="wards_form_view" model="ir.ui.view">
         <field name="name">hospital.ward.form</field>
         <field name="model">hospital.ward</field>
