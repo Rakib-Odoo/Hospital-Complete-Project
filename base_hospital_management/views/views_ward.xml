@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="wards_form_view" model="ir.ui.view">
+        <field name="name">hospital.ward.form</field>
+        <field name="model">hospital.ward</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ward_no"/>
+                            <field name="floor_no"/>
+                        </group>
+                        <group>
+                            <field name="bed_count"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <group string="Additional Information" name="additional_info"/>
+                        <field name="note"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ward" model="ir.actions.act_window">
+        <field name="name">Wards</field>
+        <field name="res_model">hospital.ward</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Wards
+            </p>
+            <p>
+                you can create wards here.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="hospital_wards"
+              name="Wards"
+              parent="hospital_root_menu"
+              action="action_ward"
+              sequence="1"/>
+
+</odoo>

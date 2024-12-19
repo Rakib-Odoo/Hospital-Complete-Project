@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem id="main_menu"
+              name="Hospital Management"
+              sequence="1"/>
+
+    <menuitem id="hospital_root_menu"
+              name="Infrastructure Management"
+              parent="main_menu"
+              sequence="0"/>
+
+</odoo>
