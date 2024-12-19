@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hospital_beds,hospital.beds,model_hospital_bed,,1,1,1,1
 access_hospital_wards,hospital.wards,model_hospital_ward,,1,1,1,1
 access_hospital,hospital.hospital,model_hospital_hospital,,1,1,1,1
+access_hospital_building,hospital.buildings,model_hospital_building,,1,1,1,1

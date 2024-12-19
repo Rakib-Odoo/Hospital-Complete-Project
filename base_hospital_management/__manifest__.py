@@ -17,6 +17,7 @@
         'views/views_bed.xml',
         'views/views_ward.xml',
         'views/views_hospital.xml',
+        'views/views_buildings.xml',
     ],
     'installable':True,
     'application':True,

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="building_tree_view" model="ir.ui.view">
+        <field name="name">hospital.building.tree</field>
+        <field name="model">hospital.building</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="building_name"/>
+                <field name="institution_id"/>
+                <field name="mobile"/>
+                <field name="email"/>
+                <field name="bed_count"/>
+                <field name="ward_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="building_form_view" model="ir.ui.view">
+        <field name="name">hospital.building.form</field>
+        <field name="model">hospital.building</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="building_name"/>
+                            <field name="institution_id"/>
+                            <field name="mobile"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="bed_count"/>
+                            <field name="ward_count"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <group string="Additional Information"/>
+                        <field name="note"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_building" model="ir.actions.act_window">
+        <field name="name">Block</field>
+        <field name="res_model">hospital.building</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Buildings
+            </p>
+            <p>
+                you can create buildings here.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="hospital_building"
+              name="Block"
+              parent="hospital_root_menu"
+              action="action_building"
+              sequence="3"/>
+</odoo>
